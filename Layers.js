@@ -115,8 +115,8 @@ class CenteredShape extends Layer {
     noStroke()
     push()
     translate(width / 2, height / 2)
-    if (this.randomShape < 0.1) {
-      rect(0, 0, this.shapeSize * 2, this.shapeSize * 2)
+    if (this.randomShape < 0.99) {
+      rect(0, 0, this.shapeSize * 1.7, this.shapeSize * 1.7)
     } else if (this.randomShape >= 0.1 && this.randomShape < 0.6) {
       ellipse(0, 0, this.shapeSize * 2, this.shapeSize * 2)
     } else if (this.randomShape >= 0.6) {

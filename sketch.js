@@ -18,6 +18,19 @@ function setup() {
 }
 
 function draw() {
+  layerConstructors.forEach(lcon => {
+    let picker = random(1)
+    if (picker > lcon.weight) {
+      layers.push(lcon.init())
+    }
+  })
+
+  console.log(layers)
+
+  layers.forEach(layer => {
+    layer.render()
+  })
+
   // const dottedLines = new DottedLines()
   // dottedLines.render()
 
@@ -27,8 +40,8 @@ function draw() {
   // const ringOfShapes = new RingOfShapes()
   // ringOfShapes.render()
 
-  const steppedHexagons = new SteppedHexagons()
-  steppedHexagons.render()
+  // const steppedHexagons = new SteppedHexagons()
+  // steppedHexagons.render()
 
   // let picker = random(1)
   // if (picker > 0.3) {
