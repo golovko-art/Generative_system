@@ -2,14 +2,14 @@ const CRYSTAL_SIZE = 500
 const SIDES = 6
 let PALETTE = []
 
+const layers = []
+
 function setup() {
   createCanvas(530, 530, SVG)
-  background(230)
-  colorMode(HSL);
 
   PALETTE = [
-    color(300, 100, 50), //pink
-    color(230, 100, 30), //blue
+    color(255, 52, 154), // pink
+    color(4, 0, 152) // blue
   ]
 
   noLoop()
@@ -18,14 +18,35 @@ function setup() {
 }
 
 function draw() {
-  const circles = new Circles() 
-  circles.render()
+  // const dottedLines = new DottedLines()
+  // dottedLines.render()
 
-  const simpleLines = new SimpleLines()
-  simpleLines.render()
+  // const centeredShape = new CenteredShape()
+  // centeredShape.render()
 
-  const outLineShape = new OutLineShape()
-  outLineShape.render()
+  // const ringOfShapes = new RingOfShapes()
+  // ringOfShapes.render()
 
-  testLines()
+  const steppedHexagons = new SteppedHexagons()
+  steppedHexagons.render()
+
+  // let picker = random(1)
+  // if (picker > 0.3) {
+  //   layers.push(new OutlineShape())
+  // }
+
+  // picker = random(1)
+  // if (picker > 0.3) {
+  //   layers.push(new SimpleLines())
+  // }
+
+  // picker = random(1)
+  // if (picker > 0.3) {
+  //   layers.push(new Circles())
+  // }
+
+  // layers.forEach(layer => {
+  //   layer.render()
+  // })
 }
+
